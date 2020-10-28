@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tangkc.business.job.mapper.JobMapper">
+  <resultMap id="BaseResultMap" type="com.tangkc.business.job.dataobject.Job">
+    <!--@mbg.generated-->
+    <!--@Table t_job-->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="jobid" jdbcType="VARCHAR" property="jobid" />
+    <result column="coid" jdbcType="VARCHAR" property="coid" />
+    <result column="company_name" jdbcType="VARCHAR" property="companyName" />
+    <result column="company_href" jdbcType="VARCHAR" property="companyHref" />
+    <result column="job_name" jdbcType="VARCHAR" property="jobName" />
+    <result column="job_title" jdbcType="VARCHAR" property="jobTitle" />
+    <result column="job_href" jdbcType="VARCHAR" property="jobHref" />
+    <result column="provide_salary" jdbcType="VARCHAR" property="provideSalary" />
+    <result column="company_type" jdbcType="VARCHAR" property="companyType" />
+    <result column="company_size" jdbcType="VARCHAR" property="companySize" />
+    <result column="job_welf" jdbcType="VARCHAR" property="jobWelf" />
+    <result column="job_attribute" jdbcType="VARCHAR" property="jobAttribute" />
+    <result column="work_area" jdbcType="VARCHAR" property="workArea" />
+    <result column="work_area_id" jdbcType="VARCHAR" property="workAreaId" />
+    <result column="work_area_name" jdbcType="VARCHAR" property="workAreaName" />
+    <result column="update_date" jdbcType="VARCHAR" property="updateDate" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, jobid, coid, company_name, company_href, job_name, job_title, job_href, provide_salary, 
+    company_type, company_size, job_welf, job_attribute, work_area, work_area_id, work_area_name, 
+    update_date, update_time, create_time
+  </sql>
+</mapper>
