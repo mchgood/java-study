@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tangkc.business.job.mapper.StudentMapper">
+  <resultMap id="BaseResultMap" type="com.tangkc.business.job.dataobject.StudentDO">
+    <!--@mbg.generated-->
+    <!--@Table t_student-->
+    <id column="id_" jdbcType="INTEGER" property="id" />
+    <result column="student_name" jdbcType="VARCHAR" property="studentName" />
+    <result column="class_id" jdbcType="INTEGER" property="classId" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id_, student_name, class_id
+  </sql>
+</mapper>

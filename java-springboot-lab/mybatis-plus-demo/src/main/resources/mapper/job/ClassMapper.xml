@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tangkc.business.job.mapper.ClassMapper">
+  <resultMap id="BaseResultMap" type="com.tangkc.business.job.dataobject.ClassDO">
+    <!--@mbg.generated-->
+    <!--@Table t_class-->
+    <id column="id_" jdbcType="INTEGER" property="id" />
+    <result column="class_name" jdbcType="VARCHAR" property="className" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id_, class_name
+  </sql>
+
+  <resultMap id="ClassStudentsMap" type="com.tangkc.business.job.dto.ClassStudensDTO" >
+    <id column="id_" jdbcType="INTEGER" property="id" />
+    <result column="class_name" jdbcType="VARCHAR" property="className" />
+    <collection property="students" javaType="java.util.ArrayList"
+                ofType="com.tangkc.business.job.dataobject.StudentDO">
+      <id column="student_id" jdbcType="INTEGER" property="id" />
+      <result column="student_name" jdbcType="VARCHAR" property="studentName" />
+      <result column="class_id" jdbcType="INTEGER" property="classId" />
+    </collection>
+  </resultMap>
+
+  <select id="selectClassStudens" resultMap="ClassStudentsMap">
+    SELECT
+        t.*,s.student_name,s.id_ as student_id
+    FROM
+        t_class t
+        LEFT JOIN t_student s ON t.id_ = s.class_id
+        order by t.id_
+  </select>
+
+</mapper>
